@@ -37,8 +37,8 @@ class TwitterOauth:
 
 if __name__ == '__main__':
 
-    CONSUMER_KEY = "<< your consumer key >>"
-    CONSUMER_SECRET = "<< your consumer secret >>"
+    CONSUMER_KEY = "<< your API key >>"
+    CONSUMER_SECRET = "<< your API secret key >>"
 
     t = TwitterOauth(CONSUMER_KEY, CONSUMER_SECRET)
     authenticate_url = t.get_authenticate_url()
