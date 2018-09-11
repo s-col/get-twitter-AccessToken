@@ -1,2 +1,4 @@
 # get-twitter-AccessToken
-Get and display the access token of a twitter account.
+Twitterアカウントのアクセストークンを取得して表示します．
+
+## Demo
