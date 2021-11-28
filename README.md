@@ -2,7 +2,7 @@
 Twitterアカウントのアクセストークンを取得して表示します．
 
 ## Demo
-![demo](https://github.com/s-col/get-twitter-AccessToken/blob/media/demo.gif)
+![demo.gif](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/289805/e848b9e1-3fae-1004-8e8a-a062f11f531c.gif)
 
 ## 必要なパッケージ
 * oauth2
