@@ -8,7 +8,7 @@ Twitterアカウントのアクセストークンを取得して表示します�
 * oauth2
 
 ## 使い方
-1. `TwitterOauth.py`の40, 41行目を編集して，Twitter AppのAPI keyとAPI secret keyを設定する
+1. `TwitterOauth.py`の46, 50行目を編集して，Twitter AppのAPI keyとAPI secret keyを設定する（または引数で指定する。ブラウザも指定したい場合はそのフルパスを""で囲って指定する）
 2. `python TwitterOauth.py`を実行する
 3. ブラウザが開き，Twitterの認証画面が表示される
 4. アクセストークンを取得したいTwitterアカウントでログインし，「連携アプリを認証」をクリックするとPINが表示される

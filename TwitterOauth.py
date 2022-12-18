@@ -1,11 +1,10 @@
+import sys
 import urllib
-import json
 import webbrowser
 import oauth2 as oauth
 
 
 class TwitterOauth:
-
     REQUEST_TOKEN_URL = "https://api.twitter.com/oauth/request_token"
     ACCESS_TOKEN_URL = "https://api.twitter.com/oauth/access_token"
     AUTHENTICATE_URL = "https://api.twitter.com/oauth/authenticate"
@@ -39,14 +38,26 @@ class TwitterOauth:
 
 if __name__ == '__main__':
 
+    args = sys.argv # CONSUMER_KEY, CONSUMER_SECRET, Browser fullpath(e.g. "C:\Program Files\Google\Chrome\Application\chrome.exe") if you specify browser
     ###############################################################################
-    CONSUMER_KEY = "<< your API key >>"  # ここに API key を設定する
-    CONSUMER_SECRET = "<< your API secret key >>"  # ここに API secret key を設定する
+    if len(args) > 1:
+        CONSUMER_KEY = args[1]  # ここに API key を設定する
+    else:
+        CONSUMER_KEY = "<< your API key >>"  # ここに API key を設定する
+    if len(args) > 2:
+        CONSUMER_SECRET = args[2]  # ここに API secret key を設定する
+    else:
+        CONSUMER_SECRET = "<< your API secret key >>"  # ここに API secret key を設定する
     ###############################################################################
 
     t = TwitterOauth(CONSUMER_KEY, CONSUMER_SECRET)
     authenticate_url = t.get_authenticate_url()
-    webbrowser.open(authenticate_url)
+    if len(args) > 3:
+        print(args[3])
+        browser = webbrowser.get('"{}" %s'.format(args[3]))
+    else:
+        browser = webbrowser.get()
+    browser.open(authenticate_url)
 
     print("PIN? >> ", end="")
     pin = int(input())
