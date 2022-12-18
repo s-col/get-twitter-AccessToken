@@ -1,11 +1,10 @@
+import sys
 import urllib
-import json
 import webbrowser
 import oauth2 as oauth
 
 
 class TwitterOauth:
-
     REQUEST_TOKEN_URL = "https://api.twitter.com/oauth/request_token"
     ACCESS_TOKEN_URL = "https://api.twitter.com/oauth/access_token"
     AUTHENTICATE_URL = "https://api.twitter.com/oauth/authenticate"
